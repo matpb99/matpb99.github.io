@@ -8,31 +8,23 @@ import { getCollection } from "astro:content";
 const [staticData] = await getCollection("staticData");
 const { github, githubIconName, linkedin, linkedinIconName } = staticData.data;
 
-const currentPath = Astro.url.pathname;
-const routes = ["/", "/portfolio", "/about-me"];
-
-// Check if the current route is in the list of routes
-const isActiveRoute = routes.includes(currentPath);
-
-const navItems = isActiveRoute
-  ? ["home", "experience", "projects", "about", "blog"]
-  : ["home", "blog", "about"]; // Change the items
+const navItems = ["home", "projects", "tech-stack"];
 ---
 
 <header
   role="banner"
-  aria-label="Main navigation"
+  aria-label="Navegación principal"
   class="sticky top-0 z-50 w-full p-4 font-medium text-blacktext dark:text-zinc-300 dark:bg-[#0E0E11]/80 dark:border-b dark:border-zinc-800 bg-white/90 backdrop-blur-xs dark:backdrop-blur-xs max-md:z-50 max-md:px-0 transition-all"
 >
   <div
     class="relative mx-auto flex max-w-7xl flex-row items-center justify-between max-xl:px-6"
   >
-    <a href="/" aria-label="Go to home">
-      <Icon
-        name="logo"
-        class="h-6 cursor-pointer transition-all hover:text-mint-300"
-        aria-hidden="true"
-      />
+    <a
+      href="/"
+      aria-label="Ir a inicio"
+      class="text-2xl font-bold text-blacktext dark:text-white hover:text-mint-300 transition-all"
+    >
+      matpb99
     </a>
 
     <Navigation items={navItems} />
@@ -50,7 +42,7 @@ const navItems = isActiveRoute
       <ThemeIcon />
       <button
         class="hamburger"
-        aria-label="Open menu"
+        aria-label="Abrir menú"
         aria-expanded="false"
         aria-controls="mobile-menu"
       >

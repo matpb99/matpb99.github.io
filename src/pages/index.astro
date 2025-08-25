@@ -1,22 +1,85 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Experience from "../components/portfolio/Experience.astro";
-import HeroIndex from "../components/portfolio/HeroIndex.astro";
-import Contact from "../components/portfolio/Contact.astro";
 import ListProjects from "../components/portfolio/ListProjects.astro";
+import Tools from "../components/portfolio/Tools.astro";
+import Heading from "../components/ui/Heading.astro";
+import { Icon } from "astro-icon/components";
 import { getCollection } from "astro:content";
+import Button from "../components/ui/Button.astro";
 
 const [staticData] = await getCollection("staticData");
-const { pageTitle, pageDescription, OGImage } = staticData.data;
+const { profileName, email, emailIconName, contactSectionButtonText } =
+  staticData.data;
 ---
 
-<Layout
-  pageTitle={pageTitle}
-  description={pageDescription}
-  ogimage={{ alt: OGImage.alt, url: OGImage.url }}
->
-  <HeroIndex />
-  <Experience />
+<Layout>
+  <section id="home" class="scroll-m-16 px-8 max-sm:px-4 py-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-7xl mx-auto">
+      <!-- Tarjeta Sobre Mí -->
+      <div
+        id="about-me"
+        class="mx-auto mb-4 w-full max-w-7xl rounded-2xl bg-linear-to-r from-mint-300 to-mint-50 p-[.2rem] dark:from-mint-600 dark:to-mint-200/5 max-md:h-auto"
+      >
+        <div
+          class="group relative z-0 flex h-full w-full flex-col gap-4 rounded-2xl bg-linear-to-tr from-riptide-100 to-white p-8 transition-all hover:shadow-[0_10px_50px_rgba(13,188,130,0.2)] dark:bg-linear-to-r dark:from-mint-950 dark:to-zinc-950 dark:before:bg-[radial-gradient(circle,rgba(13,188,130)_0,rgba(1,45,34)_100%)] before:bg-[radial-gradient(circle,rgba(95,255,202)_0,rgba(144,253,210)_100%)] before:absolute before:left-65 before:top-10 before:h-[40%] before:aspect-square before:rounded-full before:blur-3xl before:opacity-80 before:-z-10 hover:before:animate-pulse"
+        >
+          <div class="flex items-center gap-4">
+            <div>
+              <h1
+                class="text-4xl font-black leading-none text-blacktext dark:text-white max-xl:text-3xl max-lg:text-2xl max-sm:text-center"
+              >
+                {profileName} 👋
+              </h1>
+            </div>
+          </div>
+          <p
+            class="text-lg font-medium leading-7 text-blacktext dark:text-gray-300"
+          >
+            🚀<span
+              class="bg-linear-to-r from-riptide-500 to-mint-500 bg-clip-text font-black text-transparent dark:from-riptide-300 dark:to-mint-200"
+              >Ingeniero Civil Industrial</span
+            >
+            con sólida formación en ciencia y análisis de datos, comprometido con
+            la implementación tecnológica para potenciar procesos productivos a través
+            del uso estratégico de la información. Me motiva el
+            <span
+              class="bg-linear-to-r from-riptide-500 to-mint-500 bg-clip-text font-black text-transparent dark:from-riptide-300 dark:to-mint-200"
+              >aprendizaje y la mejora continua</span
+            >, ya sea explorando nuevas áreas o profundizando en conocimientos
+            ya adquiridos.🚀
+          </p>
+          <div class="flex mt-auto">
+            <Button
+              link={"mailto:" + email}
+              text={contactSectionButtonText}
+              iconName={emailIconName}
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- Tarjeta Tech Stack-->
+      <div
+        id="tech-stack"
+        class="mx-auto mb-4 w-full max-w-7xl rounded-2xl bg-linear-to-r from-mint-300 to-mint-50 p-[.2rem] hover:to-mint-300/30 dark:from-mint-600 dark:to-mint-200/5 dark:hover:to-mint-600/30 max-md:h-auto"
+      >
+        <article
+          class="group relative z-0 flex h-full w-full flex-col gap-6 overflow-hidden rounded-2xl bg-linear-to-tr from-riptide-100 to-mint-100 p-6 transition hover:shadow-[0_10px_50px_rgba(13,188,130,0.2)] before:absolute before:-bottom-0 before:left-30 before:-z-10 before:h-[80%] before:aspect-square before:rounded-full before:bg-[radial-gradient(circle,rgba(95,255,202)_0,rgba(144,253,210)_100%)] before:blur-3xl before:opacity-30 before:transition dark:bg-linear-to-r dark:from-mint-900 dark:to-mint-950 dark:overflow-hidden dark:before:bg-[radial-gradient(circle,rgba(13,188,130)_0,rgba(1,45,34)_100%)] dark:before:opacity-80 max-lg:gap-4 max-md:gap-3 max-md:p-4"
+        >
+          <div class="flex items-center gap-4 max-md:gap-2">
+            <Icon
+              class="text-3xl text-mint-500 dark:text-white max-md:text-2xl max-sm:text-sm"
+              name="dashboard"
+              aria-hidden="true"
+            />
+            <Heading text="Tech" textGradient="Stack" level={2} />
+          </div>
+          <div>
+            <Tools />
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
   <ListProjects />
-  <Contact />
 </Layout>

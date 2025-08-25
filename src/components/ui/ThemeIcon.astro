@@ -2,37 +2,43 @@
 import { Icon } from "astro-icon/components";
 ---
 
-<button id="themeToggle" aria-label="themeToggle" class="hover:cursor-pointer hover:text-mint-400 transition-all">
-    <Icon name="sun" class="sun"/>
-    <Icon name="moon" class="moon"/>
+<button
+    id="themeToggle"
+    aria-label="themeToggle"
+    class="hover:cursor-pointer hover:text-mint-400 transition-all"
+>
+    <Icon name="sun" class="sun" />
+    <Icon name="moon" class="moon" />
 </button>
-
 
 <style>
     #themeToggle {
         border: 0;
         background: none;
     }
-    .sun  {
+    .sun {
         display: block;
     }
-    .moon  {
+    .moon {
         display: none;
     }
 
-    :global(.dark) .sun  {
+    :global(.dark) .sun {
         display: none;
     }
-    :global(.dark) .moon  {
+    :global(.dark) .moon {
         display: block;
     }
 </style>
 
 <script is:inline>
     // Execute immediately before the page loads
-    (function() {
+    (function () {
         const theme = (() => {
-            if (typeof localStorage !== "undefined" && localStorage.getItem("theme")) {
+            if (
+                typeof localStorage !== "undefined" &&
+                localStorage.getItem("theme")
+            ) {
                 return localStorage.getItem("theme");
             }
             if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
@@ -51,15 +57,17 @@ import { Icon } from "astro-icon/components";
     })();
 
     // Listen for changes in system preferences
-    window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", (e) => {
-        if (!localStorage.getItem("theme")) {
-            if (e.matches) {
-                document.documentElement.classList.add("dark");
-            } else {
-                document.documentElement.classList.remove("dark");
+    window
+        .matchMedia("(prefers-color-scheme: dark)")
+        .addEventListener("change", (e) => {
+            if (!localStorage.getItem("theme")) {
+                if (e.matches) {
+                    document.documentElement.classList.add("dark");
+                } else {
+                    document.documentElement.classList.remove("dark");
+                }
             }
-        }
-    });
+        });
 
     const handleToggleClick = () => {
         const element = document.documentElement;

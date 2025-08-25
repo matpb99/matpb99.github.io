@@ -2,116 +2,244 @@ export interface Language {
   name: string;
   iconName: string;
   className?: string;
+  
 }
 
 export const languages: Record<string, Language> = {
-  angular: {
-    name: "Angular",
-    iconName: "angular",
+  python: {
+    name: "Python",
+    iconName: "python",
+
+  },
+  sql: {
+    name: "SQL",
+    iconName: "sql",
+
+  },
+  html: {
+    name: "HTML",
+    iconName: "html",
+
+  },
+  latex: {
+    name: "LaTeX",
+    iconName: "latex",
+
+  },
+  bigquery: {
+    name: "BigQuery",
+    iconName: "google-bigquery",
+
+  },
+  powerbi: {
+    name: "Power BI",
+    iconName: "power-bi",
+
+  },
+  tableau: {
+    name: "Tableau",
+    iconName: "tableau",
+
+  },
+  looker: {
+    name: "Looker",
+    iconName: "looker",
+
+  },
+  seaborn: {
+    name: "Seaborn",
+    iconName: "seaborn",
+
+  },
+  matplotlib: {
+    name: "Matplotlib",
+    iconName: "matplotlib",
+
+  },
+  powerautomate: {
+    name: "Power Automate",
+    iconName: "power-automate",
+
+  },
+  git: {
+    name: "Git",
+    iconName: "git",
+
+  },
+  excel: {
+    name: "MS Excel",
+    iconName: "microsoft-excel",
+
+  },
+  googlecolab: {
+    name: "Google Colab",
+    iconName: "google-colab",
+
+  },
+  msproject: {
+    name: "MS Project",
+    iconName: "microsoft-project",
+
+  },
+
+  ollama: {
+    name: "Ollama",
+    iconName: "ollama",
+
+  },
+
+  "web-scraping": {
+    name: "Web Scraping",
+    iconName: "web-scraping",
+
+  },
+  apis: {
+    name: "APIs",
+    iconName: "apis",
+
+  },
+  streamlit: {
+    name: "Streamlit",
+    iconName: "streamlit",
+
+  },
+  rlang: {
+    name: "R",
+    iconName: "r-lang",
+
+  },
+  sklearn: {
+    name: "Scikit learn",
+    iconName: "sklearn",
+
+  },
+  pandas: {
+    name: "Pandas",
+    iconName: "pandas",
+
+  },
+  tensorflow: {
+    name: "TensorFlow",
+    iconName: "tensorflow",
+
+  },
+  sqlite: {
+    name: "SQLite",
+    iconName: "sqlite",
+
+  },
+  pytorch: {
+    name: "PyTorch",
+    iconName: "pytorch",
+
+  },
+  opencv: {
+    name: "OpenCV",
+    iconName: "opencv",
+
+  },
+  numpy: {
+    name: "NumPy",
+    iconName: "numpy",
+
+  },
+  keras: {
+    name: "Keras",
+    iconName: "keras",
+
+  },
+  fastapi: {
+    name: "FastAPI",
+    iconName: "fastapi",
+
+  },
+  docker: {
+    name: "Docker",
+    iconName: "docker",
+
   },
   astro: {
     name: "Astro",
     iconName: "astro",
+
   },
-  bootstrap: {
-    name: "Bootstrap",
-    iconName: "bootstrap",
+  selenium: {
+    name: "Selenium",
+    iconName: "selenium",
+    
   },
-  cloudflare: {
-    name: "Cloudflare",
-    iconName: "cloudflare",
+  vscode: {
+    name: "VSCode",
+    iconName: "vscode",
+    
   },
-  html: {
-    name: "HTML 5",
-    iconName: "html",
+  huggingface: {
+    name: "Hugging Face",
+    iconName: "huggingface",
+
+  },
+  airflow: {
+    name: "Airflow",
+    iconName: "airflow",
+
+  },
+  wordpress: {
+    name: "Wordpress",
+    iconName: "wordpress",
+
+  },
+  mysql: {
+    name: "MySQL",
+    iconName: "mysql",
+    
+  },
+  githubactions: {
+    name: "GitHub Actions",
+    iconName: "githubactions",
+  },
+  grafana: {
+    name: "Grafana",
+    iconName: "grafana",
+  },
+  graphql: {
+    name: "GraphQL",
+    iconName: "graphql",
+  },
+  kaggle: {
+    name: "Kaggle",
+    iconName: "kaggle",
+  },
+  mongodb: {
+    name: "MongoDB",
+    iconName: "mongodb",
+  },
+  playwright: {
+    name: "Playwright",
+    iconName: "playwright",
+  },
+  ploty: {
+    name: "Plotly",
+    iconName: "ploty",
+  },
+  typescript: {
+    name: "TypeScript",
+    iconName: "typescript",
+  },
+  tailwindcss: {
+    name: "Tailwind CSS",
+    iconName: "tailwindcss",
   },
   javascript: {
     name: "JavaScript",
     iconName: "javascript",
   },
-  mongo: {
-    name: "MongoDb",
-    iconName: "mongo",
+  postgresql: {
+    name: "PostgreSQL",
+    iconName: "postgresql",
   },
-  mysql: {
-    name: "MySQL",
-    className: "bg-[#f6ece1]!",
-    iconName: "mysql",
-  },
-  wordpress: {
-    name: "Wordpress",
-    iconName: "wordpress",
-  },
-  node: {
-    name: "Node.js",
-    iconName: "node",
-  },
-  tailwind: {
-    name: "Tailwind CSS",
-    iconName: "tailwind",
-  },
-  figma: {
-    name: "Figma",
-    iconName: "figma",
-  },
-  firebase: {
-    name: "Firebase",
-    iconName: "firebase",
-  },
-  markdown: {
-    name: "Markdown",
-    iconName: "markdown",
-  },
-  php: {
-    name: "PHP",
-    iconName: "php",
-  },
-  sass: {
-    name: "Sass",
-    iconName: "sass",
-  },
-  ts: {
-    name: "TypeScript",
-    iconName: "typescript",
-  },
-  git: {
-    name: "Git",
-    iconName: "git",
-  },
-  css: {
-    name: "CSS",
-    iconName: "css",
-  },
-  vercel: {
-    name: "Vercel",
-    iconName: "vercel",
-  },
-  netlify: {
-    name: "Netlify",
-    iconName: "netlify",
-  },
-  gatsby: {
-    name: "Gatsby",
-    iconName: "gatsby",
-  },
-  windsurf: {
-    name: "Windsurf",
-    iconName: "windsurf-logo",
-  },
-  cursor: {
-    name: "Cursor",
-    iconName: "cursor-ia",
-  },
-  deepseek: {
-    name: "DeepSeek",
-    iconName: "deepseek",
-  },
-  python: {
-    name: "Python",
-    iconName: "python",
-  },
+
 };
 
 export const getLanguage = (lang: string): Language => {
   return languages[lang] || languages.html;
-}; 
+};
