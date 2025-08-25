@@ -35,7 +35,7 @@ Proyecto exploratorio que utiliza un modelo de lenguaje (LLM) potenciado con la 
 
 El modelo asignó puntuaciones de afinidad a los candidatos (ej. Jeannette Jara: 2410, José Antonio Kast: 2009, Evelyn Matthei: 1496). El proyecto demostró con éxito que la combinación de LLM y RAG es una herramienta viable para explorar escenarios complejos, abriendo camino a su uso en contextos analíticos más allá de la simple generación de texto.
 
-![Texto alternativo para la imagen](/public/images/projects/output.webp)
+![Texto alternativo para la imagen](/images/projects/output.webp)
 
 ## 🔮 Trabajo Futuro
 
