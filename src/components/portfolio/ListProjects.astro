@@ -28,7 +28,7 @@ allPosts.sort(
 
   <div
     id="containerProjects"
-    class="mx-auto max-w-7xl grid grid-cols-3 max-lg:grid-cols-2 max-md:grid-cols-1 gap-5 p-2 py-4 max-h-[150vh] overflow-hidden transition-[max-height] duration-500 ease-in-out"
+    class="mx-auto max-w-7xl grid grid-cols-3 max-lg:grid-cols-2 max-md:grid-cols-1 gap-5 p-2 py-4 max-h-[100vh] overflow-hidden transition-all duration-500 ease-in-out"
   >
     {
       allPosts.map((post) => (
@@ -63,13 +63,10 @@ allPosts.sort(
 
     if (container && moreProjectsBtn) {
       // Expand container to show all projects
-      container.classList.remove("h-[150vh]");
-      container.classList.remove("h-auto");
-      // Hide the "View More" button after animation completes
+      container.classList.remove("max-h-[100vh]");
+      container.classList.add("max-h-none");
+      // Hide the "View More" button
       moreProjectsBtn.classList.add("hidden");
-      setTimeout(() => {
-        moreProjectsBtn.classList.add("hidden");
-      }, 500);
     }
   });
 </script>
