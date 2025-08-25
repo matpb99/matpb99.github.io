@@ -13,27 +13,25 @@ const { profileName, email, emailIconName, contactSectionButtonText } =
 ---
 
 <Layout>
-  <section id="home" class="scroll-m-16 px-8 sm:px-0 py-8">
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 xl:max-w-7xl xl:mx-auto">
+  <section id="home" class="scroll-m-16 px-4 sm:px-6 lg:px-8 py-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 md:gap-8 xl:max-w-7xl xl:mx-auto">
       <!-- Tarjeta Sobre Mí -->
       <div
         id="about-me"
         class="mx-auto mb-4 w-full rounded-2xl bg-linear-to-r from-mint-300 to-mint-50 p-[.2rem] dark:from-mint-600 dark:to-mint-200/5 max-md:h-auto"
       >
         <div
-          class="group relative z-0 flex h-full w-full flex-col gap-4 rounded-2xl bg-linear-to-tr from-riptide-100 to-white p-4 sm:p-8 transition-all hover:shadow-[0_10px_50px_rgba(13,188,130,0.2)] dark:bg-linear-to-r dark:from-mint-950 dark:to-zinc-950 dark:before:bg-[radial-gradient(circle,rgba(13,188,130)_0,rgba(1,45,34)_100%)] before:bg-[radial-gradient(circle,rgba(95,255,202)_0,rgba(144,253,210)_100%)] before:absolute before:left-65 before:top-10 before:h-[40%] before:aspect-square before:rounded-full before:blur-3xl before:opacity-80 before:-z-10 hover:before:animate-pulse"
+          class="group relative z-0 flex h-full w-full flex-col gap-4 rounded-2xl bg-linear-to-tr from-riptide-100 to-white p-4 sm:p-6 md:p-8 transition-all hover:shadow-[0_10px_50px_rgba(13,188,130,0.2)] dark:bg-linear-to-r dark:from-mint-950 dark:to-zinc-950 overflow-hidden"
         >
-          <div class="flex items-center gap-4">
-            <div>
-              <h1
-                class="text-4xl font-black leading-none text-blacktext dark:text-white max-xl:text-3xl max-lg:text-2xl max-sm:text-center"
-              >
-                {profileName} 👋
-              </h1>
-            </div>
+          <div class="flex items-center max-sm:justify-center gap-4">
+            <h1
+              class="text-2xl sm:text-3xl md:text-4xl font-black leading-none text-blacktext dark:text-white text-center sm:text-left"
+            >
+              {profileName} 👋
+            </h1>
           </div>
           <p
-            class="text-lg font-medium leading-7 text-blacktext dark:text-gray-300"
+            class="text-base sm:text-lg font-medium leading-6 sm:leading-7 text-blacktext dark:text-gray-300 text-justify sm:text-left"
           >
             🚀<span
               class="bg-linear-to-r from-riptide-500 to-mint-500 bg-clip-text font-black text-transparent dark:from-riptide-300 dark:to-mint-200"
@@ -48,11 +46,12 @@ const { profileName, email, emailIconName, contactSectionButtonText } =
             >, ya sea explorando nuevas áreas o profundizando en conocimientos
             ya adquiridos.🚀
           </p>
-          <div class="flex mt-auto">
+          <div class="mt-4">
             <Button
               link={"mailto:" + email}
               text={contactSectionButtonText}
               iconName={emailIconName}
+              class="w-full sm:w-auto"
             />
           </div>
         </div>
@@ -64,11 +63,11 @@ const { profileName, email, emailIconName, contactSectionButtonText } =
         class="mx-auto mb-4 w-full rounded-2xl bg-linear-to-r from-mint-300 to-mint-50 p-[.2rem] hover:to-mint-300/30 dark:from-mint-600 dark:to-mint-200/5 dark:hover:to-mint-600/30 max-md:h-auto"
       >
         <article
-          class="group relative z-0 flex h-full w-full flex-col gap-6 overflow-hidden rounded-2xl bg-linear-to-tr from-riptide-100 to-mint-100 p-4 sm:p-6 md:p-8 transition hover:shadow-[0_10px_50px_rgba(13,188,130,0.2)] before:absolute before:-bottom-0 before:left-30 before:-z-10 before:h-[80%] before:aspect-square before:rounded-full before:bg-[radial-gradient(circle,rgba(95,255,202)_0,rgba(144,253,210)_100%)] before:blur-3xl before:opacity-30 before:transition dark:bg-linear-to-r dark:from-mint-900 dark:to-mint-950 dark:overflow-hidden dark:before:bg-[radial-gradient(circle,rgba(13,188,130)_0,rgba(1,45,34)_100%)] dark:before:opacity-80"
+          class="group relative z-0 flex h-full w-full flex-col gap-4 sm:gap-6 overflow-hidden rounded-2xl bg-linear-to-tr from-riptide-100 to-mint-100 p-4 sm:p-6 md:p-8 transition hover:shadow-[0_10px_50px_rgba(13,188,130,0.2)] dark:bg-linear-to-r dark:from-mint-900 dark:to-mint-950"
         >
-          <div class="flex items-center gap-4 max-md:gap-2">
+          <div class="flex items-center gap-2 sm:gap-4">
             <Icon
-              class="text-3xl text-mint-500 dark:text-white max-md:text-2xl max-sm:text-sm"
+              class="text-xl sm:text-2xl md:text-3xl text-mint-500 dark:text-white"
               name="dashboard"
               aria-hidden="true"
             />
