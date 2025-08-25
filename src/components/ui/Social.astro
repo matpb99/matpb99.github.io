@@ -8,18 +8,19 @@ interface Props {
 }
 
 const { iconName, link, label = `Link to ${iconName}` } = Astro.props;
+
+// Validate required props
+if (!iconName || !link) {
+    throw new Error("Social component requires both iconName and link props");
+}
 ---
 
-{
-    link && (
-        <a
-            class="hover:text-mint-300 hover:scale-150 transition-all"
-            target="_blank"
-            href={link}
-            rel="noopener noreferrer"
-            aria-label={label}
-        >
-            <Icon name={iconName} aria-hidden="true" />
-        </a>
-    )
-}
+<a
+    class="hover:text-mint-300 hover:scale-150 transition-all"
+    target="_blank"
+    href={link}
+    rel="noopener noreferrer"
+    aria-label={label}
+>
+    <Icon name={iconName} aria-hidden="true" />
+</a>
