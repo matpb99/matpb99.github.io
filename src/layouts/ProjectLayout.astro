@@ -4,7 +4,6 @@ import Capsule from "../components/ui/Capsule.astro";
 import Heading from "../components/ui/Heading.astro";
 import NavArticle from "../components/layout/NavArticle.astro";
 const { frontmatter } = Astro.props;
-
 ---
 
 <Layout
@@ -17,7 +16,7 @@ const { frontmatter } = Astro.props;
   >
     <div class="w-64 max-xl:hidden"></div>
     <article
-      class="flex flex-col gap-8 max-w-3xl max-md:w-full pb-10 pt-8 mt-8 px-14 max-md:px-10 max-sm:px-4  dark:bg-transparent bg-white dark:border-0 border border-neutral-100 rounded-2xl" 
+      class="flex flex-col gap-8 max-w-3xl max-md:w-full pb-10 pt-8 mt-8 px-14 max-md:px-10 max-sm:px-4 dark:bg-transparent bg-white dark:border-0 border border-neutral-100 rounded-2xl"
     >
       <header class="flex flex-col gap-4" id="start">
         <div class="flex gap-2 flex-wrap">
@@ -27,10 +26,8 @@ const { frontmatter } = Astro.props;
             ))
           }
         </div>
-        
-        <Heading text={frontmatter.title} />
 
-      
+        <Heading text={frontmatter.title} />
       </header>
 
       <figure>
@@ -38,16 +35,20 @@ const { frontmatter } = Astro.props;
           frontmatter.cover ? (
             frontmatter.cover.type === "video" ? (
               <div class="w-full aspect-square overflow-hidden rounded-xl">
-                <video 
-                  autoplay 
-                  muted 
-                  loop 
-                  playsinline 
+                <video
+                  autoplay
+                  muted
+                  loop
+                  playsinline
                   preload="none"
                   poster={frontmatter.cover.thumbnail}
                   class="w-full h-full object-cover object-center"
                 >
-                  <source src={frontmatter.cover.url} type="video/mp4" media="all" />
+                  <source
+                    src={frontmatter.cover.url}
+                    type="video/mp4"
+                    media="all"
+                  />
                 </video>
               </div>
             ) : (
@@ -57,20 +58,21 @@ const { frontmatter } = Astro.props;
                 alt={frontmatter.cover.alt || "Article image"}
               />
             )
-          ) : frontmatter.image?.url && (
-            <img
-              class="w-full rounded-xl"
-              src={frontmatter.image.url}
-              alt={frontmatter.image.alt || "Article image"}
-            />
+          ) : (
+            frontmatter.image?.url && (
+              <img
+                class="w-full rounded-xl"
+                src={frontmatter.image.url}
+                alt={frontmatter.image.alt || "Article image"}
+              />
+            )
           )
         }
       </figure>
 
-      <div class="markdown " id="content">
+      <div class="markdown" id="content">
         <slot />
       </div>
-      
     </article>
     <NavArticle title={frontmatter.title} />
   </section>
