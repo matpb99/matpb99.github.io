@@ -11,10 +11,15 @@ image:
 ## 🌐 Demo
 👉 <a href="https://calculadora1rm.streamlit.app/" target="_blank">Enlace al proyecto</a>
 
-<iframe
-  src="https://calculadora1rm.streamlit.app?embed=true"
-  style="height: 450px; width: 100%;"
-></iframe>
+<div class="relative w-full overflow-hidden rounded-xl border border-zinc-200 dark:border-zinc-700" style="padding-top: 100%;">
+  <iframe
+    src="https://calculadora1rm.streamlit.app?embed=true"
+    class="absolute top-0 left-0 w-full h-full"
+    style="border: 0;"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    loading="lazy"
+  ></iframe>
+</div>
 
 ## 📝 Descripción
 

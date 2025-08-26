@@ -12,6 +12,7 @@ export default defineConfig({
 
   vite: {
     plugins: [tailwindcss()],
+    assetsInclude: ['**/*.mp4'],
   },
   markdown: {
     shikiConfig: {
