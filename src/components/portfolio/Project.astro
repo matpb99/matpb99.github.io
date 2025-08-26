@@ -14,10 +14,16 @@ import Capsule from "../ui/Capsule.astro";
             muted 
             loop 
             playsinline 
+            preload="none"
             poster={image.thumbnail}
             class="w-full h-full object-cover object-center transition-all duration-300 ease-in-out group-hover:scale-105"
           >
-            <source src={image.url} type="video/mp4" />
+            <source src={image.url} type="video/mp4" media="all" />
+            <img 
+              src={image.thumbnail || ''} 
+              alt={image.alt || ''} 
+              class="w-full h-full object-cover object-center" 
+            />
           </video>
         </div>
       ) : image?.url ? (

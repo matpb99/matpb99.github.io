@@ -43,10 +43,12 @@ const { frontmatter } = Astro.props;
                   muted 
                   loop 
                   playsinline 
+                  preload="none"
                   poster={frontmatter.cover.thumbnail}
                   class="w-full h-full object-cover object-center"
                 >
-                  <source src={frontmatter.cover.url} type="video/mp4" />
+                  <source src={frontmatter.cover.url} type="video/mp4" media="all" />
+                  <img src={frontmatter.cover.thumbnail} alt={frontmatter.cover.alt} class="w-full h-full object-cover object-center" />
                 </video>
               </div>
             ) : (

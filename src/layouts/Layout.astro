@@ -33,6 +33,11 @@ const twitterimage = `${siteUrl}${ogimage.url}`;
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <title>{pageTitle}</title>
+    
+    <!-- Preload hints for video content -->
+    <link rel="preconnect" href={siteUrl} />
+    <link rel="dns-prefetch" href={siteUrl} />
+    
     <!-- Favicon for different platforms -->
     <link rel="icon" href="/favicon-32x32.png" sizes="32x32" />
     <link rel="icon" href="/favicon-16x16.png" sizes="16x16" />
