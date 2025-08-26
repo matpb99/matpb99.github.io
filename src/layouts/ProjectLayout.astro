@@ -48,7 +48,6 @@ const { frontmatter } = Astro.props;
                   class="w-full h-full object-cover object-center"
                 >
                   <source src={frontmatter.cover.url} type="video/mp4" media="all" />
-                  <img src={frontmatter.cover.thumbnail} alt={frontmatter.cover.alt} class="w-full h-full object-cover object-center" />
                 </video>
               </div>
             ) : (
