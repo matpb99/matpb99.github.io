@@ -9,6 +9,16 @@ image:
   alt: "Imagen del proyecto Visualización con Dedos."
 ---
 
+
+## 🎥 Demo en video
+
+<div class="w-100 aspect-square overflow-hidden rounded-xl">
+  <video autoplay muted loop playsinline class="w-full h-full object-cover">
+    <source src="/videos/3d-embeddings-demo.mp4" type="video/mp4">
+  </video>
+</div>
+
+
 ## 📝 Descripción
 
 Este proyecto es una **Visualización 3D Interactiva de Embeddings Semánticos** que permite a los usuarios explorar el espacio de significado de oraciones mediante el control de gestos de mano. Combina procesamiento de lenguaje natural, aprendizaje automático, visión por computadora y gráficos 3D para ofrecer una experiencia de usuario única e intuitiva.
@@ -35,3 +45,4 @@ Este proyecto es una **Visualización 3D Interactiva de Embeddings Semánticos**
 El objetivo de este proyecto es explorar nuevas formas de interacción humano-computadora, permitiendo la manipulación de datos abstractos y complejos, como los embeddings semánticos, a través de una interfaz intuitiva y natural basada en gestos.
 
 🚀 *Desarrollado por matpb99.*
+
