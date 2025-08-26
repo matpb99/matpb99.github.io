@@ -11,6 +11,11 @@ image:
 ## 🌐 Demo
 👉 <a href="https://calculadora1rm.streamlit.app/" target="_blank">Enlace al proyecto</a>
 
+<iframe
+  src="https://calculadora1rm.streamlit.app?embed=true"
+  style="height: 450px; width: 100%;"
+></iframe>
+
 ## 📝 Descripción
 
 Este proyecto es una aplicación sencilla que calcula el One-Rep Max (1RM) de un levantador de pesas basándose en el peso levantado y el número de repeticiones. Es una herramienta útil para atletas y entusiastas del fitness quiénes desean estimar su fuerza máxima en un ejercicio.

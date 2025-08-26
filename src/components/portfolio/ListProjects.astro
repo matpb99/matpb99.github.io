@@ -38,7 +38,7 @@ allPosts.sort(
           description={post.frontmatter.description}
           date={post.frontmatter.pubDate}
           languages={post.frontmatter.languages}
-          image={post.frontmatter.image}
+          image={post.frontmatter.cover || post.frontmatter.image}
         />
       ))
     }

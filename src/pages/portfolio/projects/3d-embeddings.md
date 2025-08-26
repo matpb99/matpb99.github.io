@@ -1,22 +1,16 @@
 ---
 layout:  /src/layouts/ProjectLayout.astro
 title: 'Visualización 3D de Embeddings con Control Gestual'
-pubDate: 2025-08-20
+pubDate: 2025-08-25
 description: 'Un proyecto innovador que visualiza embeddings semánticos en 3D y permite la interacción mediante gestos de mano.'
 languages: ["python", "opencv", "sklearn"]
-image:
-  url: "/images/projects/3d-embeddings.webp"
-  alt: "Imagen del proyecto Visualización con Dedos."
+cover:
+  type: "video"
+  url: "/videos/3d-embeddings-demo.mp4"
+  alt: "Demo del proyecto Visualización con Dedos"
+  thumbnail: "/images/projects/3d-embeddings.webp"
 ---
 
-
-## 🎥 Demo en video
-
-<div class="w-100 aspect-square overflow-hidden rounded-xl">
-  <video autoplay muted loop playsinline class="w-full h-full object-cover">
-    <source src="/videos/3d-embeddings-demo.mp4" type="video/mp4">
-  </video>
-</div>
 
 
 ## 📝 Descripción
