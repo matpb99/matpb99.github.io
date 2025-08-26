@@ -36,19 +36,13 @@ const { frontmatter } = Astro.props;
       <figure>
         {
           frontmatter.cover ? (
-            frontmatter.cover.type === "video" ? (
+            frontmatter.cover.type === "gif" ? (
               <div class="w-full aspect-square overflow-hidden rounded-xl">
-                <video 
-                  autoplay 
-                  muted 
-                  loop 
-                  playsinline 
-                  preload="none"
-                  poster={frontmatter.cover.thumbnail}
+                <img
+                  src={frontmatter.cover.url}
+                  alt={frontmatter.cover.alt || "GIF animation"}
                   class="w-full h-full object-cover object-center"
-                >
-                  <source src={frontmatter.cover.url} type="video/mp4" media="all" />
-                </video>
+                />
               </div>
             ) : (
               <img
