@@ -35,8 +35,5 @@ Este proyecto es una **Visualización 3D Interactiva de Embeddings Semánticos**
 - Sentence-Transformers (para la generación de embeddings semánticos)
 
 
-## 🎯 Objetivo
-El objetivo de este proyecto es explorar nuevas formas de interacción humano-computadora, permitiendo la manipulación de datos abstractos y complejos, como los embeddings semánticos, a través de una interfaz intuitiva y natural basada en gestos.
-
 🚀 *Desarrollado por matpb99.*
 
